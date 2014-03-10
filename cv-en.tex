@@ -1,0 +1,250 @@
+% LaTeX Curriculum Vitae Template
+%
+% Copyright (C) 2004-2009 Jason Blevins <jrblevin@sdf.lonestar.org>
+% http://jblevins.org/projects/cv-template/
+%
+% You may use use this document as a template to create your own CV
+% and you may redistribute the source code freely. No attribution is
+% required in any resulting documents. I do ask that you please leave
+% this notice and the above URL in the source code if you choose to
+% redistribute this file.
+
+\RequirePackage{ifpdf}
+
+\ifpdf
+ \documentclass[a4paper,pdftex]{article}
+\else
+ \documentclass[a4paper]{article}
+\fi
+
+\usepackage{verbatim}
+
+\usepackage{hyperref}
+\usepackage{geometry}
+
+% For Polish language
+\usepackage[polish,english]{babel}
+\usepackage[T1]{polski,fontenc}
+\usepackage{polski}
+\selecthyphenation{polish}
+\usepackage[utf8]{inputenc}
+\selectlanguage{polish}
+
+% Set your name here
+\def\name{Jerzy Müller}
+
+% Replace this with a link to your CV if you like, or set it empty
+% (as in \def\footerlink{}) to remove the link in the footer:
+\def\footerlink{https://github.com/Kwestor/cv}
+
+% The following metadata will show up in the PDF properties
+\hypersetup{
+  colorlinks = true,
+  urlcolor = black,
+  pdfauthor = {\name},
+%  bookmarks = true,
+  pdftitle = {\name: Curriculum Vitae},
+  pdfsubject = {Curriculum Vitae},
+  pdfpagemode = UseNone
+}
+
+\geometry{
+  body={6.5in, 9.5in},
+  left=1.0in,
+  top=1.0in
+}
+
+% Customize page headers
+\pagestyle{myheadings}
+\markright{\name}
+\thispagestyle{empty}
+
+% Custom section fonts
+\usepackage{sectsty}
+\sectionfont{\rmfamily\mdseries\bf\Large}
+\subsectionfont{\rmfamily\mdseries\itshape\large}
+
+% Other possible font commands include:
+% \ttfamily for teletype,
+% \sffamily for sans serif,
+% \bfseries for bold,
+% \scshape for small caps,
+% \normalsize, \large, \Large, \LARGE sizes.
+
+% Don't indent paragraphs.
+\setlength\parindent{0em}
+
+% Make lists without bullets
+\renewenvironment{itemize}{
+  \begin{list}{}{
+    \setlength{\leftmargin}{1.5em}
+  }
+}{
+  \end{list}
+}
+
+\begin{document}
+
+% Place name at left
+{\huge \bf \name}
+
+% Alternatively, print name centered and bold:
+%\centerline{\huge \bf \name}
+
+\vspace{0.1in}
+
+\section*{Personal}
+
+\begin{itemize}
+ \item Date of Birth: 5th July 1988.
+ \item Nationality: Polish
+\end{itemize}
+
+\section*{Contact}
+
+\begin{itemize}
+ \item
+  \begin{tabular}{p{0.17\textwidth}p{0.73\textwidth}}
+  Email:	& \href{mailto:sidus.gemini@gmail.com}{\tt sidus.gemini (at) gmail.com}
+  \end{tabular}
+\end{itemize}
+
+\section*{Employment}
+
+\begin{itemize}
+ \item 
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   07.2011 - present & Scala Web Developer at VirtusLab, Kraków \\
+			& Fixing bugs and developing new features for Scala IDE. Inculdes comprehensive usage of Scala compiler API. \\
+			& Developing web application for production management with Play! framework and Slick. \\
+			& Developing web application using Lift framework. Project in collaboration with Luminis Research, technology used involves Machine Learning, Natural Language Processing, HBase \& Hadoop. \\
+			& Innovative web application for FX and Futures investment learning. Done in Lift framework with MongoDB storage and heavy usage of JavaScript.
+  \end{tabular}
+ \item 
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   03.2011 - 07.2011 & Java Web Developer at SoftQ, Kraków \\
+   			& Developing web application in Wicket (Java) for largest Polish hardware distributor. Application functionality includes defining contracts, tracking hardware, collecting feedback, etc.
+  \end{tabular}
+ \item 
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   07.2010 - 10.2010  & Java Developer at GridwiseTech, Kraków \\
+   			& Developing Eclipse RCP application for graphical analysis of phone call history. Part of bigger project made for Polish Police. 
+  \end{tabular}
+\end{itemize}
+
+\section*{Education}
+
+\begin{itemize}
+ \item
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   02.2011 - present & \itshape Master (equivalent, Polish: Magister) in Computer Science \\
+                     & \itshape (expected graduation June 2014) \\
+                     & Faculty of Electrical Engineering, Automatics, Computer Science and Electronics \\
+                     & AGH University of Science and Technology, Kraków, Poland
+  \end{tabular}
+ \item
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   10.2007 - 02.2011 & \itshape B.Sc Hons (equivalent, Polish: Inżynier) in Computer Science \\
+                     & Faculty of Electrical Engineering, Automatics, Computer Science and Electronics \\
+                     & AGH University of Science and Technology, Kraków, Poland
+  \end{tabular}
+ \item
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   2004 - 2007       & V$^{th}$ General High School in Kraków, Poland \\
+                     & A level {\itshape (equivalent, Polish: Matura)} : Mathematics (written exam 80\%), \\
+                     & Physical Science (written exam 92\%), \\
+                     & Literature (written exam 63\%, oral exam 80\%), \\
+                     & English Language (written exam 80\%, oral exam 100\%)
+  \end{tabular}
+\end{itemize}
+
+\section*{Courses}
+
+\begin{itemize}
+\item 
+  \begin{tabular}{p{0.16\textwidth}p{0.74\textwidth}}
+   14 -15.10.2013   	   & \itshape Typesafe’s Advanced Scala \\
+			& Typesafe training @ JDD 2013 \\
+			& \\
+			& The training is designed to help developers fully understand topics such as advanced object-functional programming, the power of Scala’s type system, implicits, etc. The course also covers how to leverage these features to create well-designed libraries or DSL’s utilizing proven best practices. \\
+			& \\
+   10.2009 - 01.2010  & \itshape  Quality Assurance in Software Development \\
+                     		& Sabre Holdings Corporation \& Department of Computer Science AGH \\
+                      	& \\
+                      	& Introduction to the theory of software testing based on a programme of the ISTQB certificate course. The course comprises of aspects of a quality  management in agile methods, practical application of tools for software testing (including Fitnesse, SoapUI, QTP) and Continuous Integration.
+  \end{tabular}
+\end{itemize}
+
+\section*{Technical and Personal Skills}
+
+\begin{itemize}
+ \item Programming languages
+  \begin{itemize}
+   \item Advanced: Scala, Java, JavaScript, HTML, CSS3 \\
+         Familiar: Colujre, Groovy, SQL
+  \end{itemize}
+ \item Toolkits \& Frameworks
+  \begin{itemize}
+   \item Play! framework, Lift
+   \item Akka, Slick
+   \item JUnit 4.0, Specs, ScalaTest
+   \item mvn, sbt
+  \end{itemize}
+ \item Other
+  \begin{itemize}
+   \setlength{\itemsep}{-0.3ex}
+	\item web development in HTML5 and CSS3;
+	\item distributed version management: git, mercurial;
+	\item experience with software development practices (bug tracking, continuous integration, revision control) \& tools;
+	\item practical knowledge about computer networks - configuring forwarding \& routing protocols;
+	\item ability to work in a team both as a leader and a team member;
+	\item fluency in typesetting documents using \LaTeXe;
+	\item experience with Linux \& Windows environments;
+  \end{itemize}
+\end{itemize}
+
+\section*{Languages}
+\begin{itemize}
+ \item Polish (native) \\
+       English (fluent in speaking and writing)
+\end{itemize}
+
+\section*{Interests}
+\begin{itemize}
+ \item literature, computer games, dancing
+\end{itemize}
+
+\section*{References}
+\begin{itemize}
+ \item Kulczycki Stanisław
+  \begin{itemize}
+   \setlength{\itemsep}{-0.3ex}
+   \item Senior Consultant at GridwiseTech
+   \item cell phone: 668 010 552
+   \item e-mail: \href{mailto:stanislaw.kulczycki@gridwisetech.com}{\tt stanislaw.kulczycki@gridwisetech.com}
+  \end{itemize}
+ \item Pokrywka Rafał
+  \begin{itemize}
+   \setlength{\itemsep}{-0.3ex}
+   \item Co-Founder / Owner / board member at SoftQ
+   \item cell phone: 608 366 649
+   \item e-mail: \href{mailto:rpokrywka@virtuslab.com}{\tt rpokrywka@virtuslab.com}
+  \end{itemize}
+\end{itemize}
+
+\bigskip
+
+% Footer
+Wyrażam zgodę na przetwarzanie  moich danych osobowych dla potrzeb niezbędnych dla realizacji procesu rekrutacji (zgodnie z ustawą z dnia 29.08.1997 r. o Ochronie Danych Osobowych, Dz. Ustaw nr 133 poz. 883). \\
+
+\begin{comment}
+I agree to the processing of my personal data in your company's recruitment, according to Poland's personal privacy regulations (Ust. z 29.08.97 r. o Ochronie Danych Osobowych Dz. U. nr 133 poz. 883). \\
+\end{comment}
+\begin{center}  
+  \begin{footnotesize}
+    Last updated: \today \\
+    \href{\footerlink}{\texttt{\footerlink}}
+  \end{footnotesize}
+\end{center}
+
+\end{document}
